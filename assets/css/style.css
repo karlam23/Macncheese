@@ -1,0 +1,209 @@
+/* color scheme sourced from http://khroma.co/generator/ */
+:root {
+    --outer-space: #33393f;
+    --bright-turquoise: #2aefcb;
+    --gin: #e0eae4;
+    --heliotrope: #e866ec;
+  }
+  
+  /* set content highlight color and background */
+  ::selection {
+    background-color: var(--bright-turquoise);
+    color: var(--outer-space);
+  }
+
+section {
+    height: 500px;
+    background-color: rgba(45, 45, 139, 0.373);
+    border: solid black 5px;
+}
+
+body {
+    font-family: 'Castoro Titling', cursive;
+
+}
+
+.header {
+    background-color: rgb(33, 41, 100);
+    height: 100vh;
+    /*4 big header*/
+    font-size: 25px;
+    color: white;
+}
+
+.header-area {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    background-color: #f4511e;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 100x;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    transition: .5s;
+}
+
+.button span:after {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    transition: .5s;
+}
+
+.button:hover span {
+    padding-right: 15px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.header-text {
+    margin-left: 30px;
+}
+
+.header a {
+    color: white;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 0px;
+
+}
+
+p {
+    margin: 0px;
+    font-size: large;
+}
+
+footer {
+    height: 500px;
+    background-color: pink;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* here bc it has ul/li*/
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    /*remove dots*/
+    width: 500px;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+li {
+    text-decoration: none;
+}
+
+.socials {
+    padding: botton 200px;
+}
+
+.socials {
+    margin: 20px;
+}
+
+.card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+    max-width: 33%;
+}
+
+/* make each code card a flexbox column to align and justify content within it */
+.code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--heliotrope);
+
+    /* outline is like border, but on the outside of the box instead of inside */
+    outline: 2px dashed var(--gin);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-card .card-header {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--outer-space);
+    color: var(--heliotrope);
+    border: 2px solid var(--gin);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+.code-card:hover,
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+}
+
+/* each card's code block grows to the height of the largest code block on the page, making each card even in height */
+.code-card .code-block {
+    flex-grow: 1;
+}
+
+.code-card pre {
+    /* set styles to make it so code wraps in <pre> instead of overflowing */
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    color: var(--gin);
+    border-radius: 8px;
+    /* use linear-gradient() function to create a fading background  */
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%,
+            rgba(232, 102, 236, 0.6) 100%);
+    display: flex;
+    align-items: center;
+}
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+    header {
+        width: 75%;
+    }
+
+    .card-column {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
