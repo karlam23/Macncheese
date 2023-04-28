@@ -33,8 +33,8 @@
 
 section {
     height: 500px;
-    background-color: rgba(45, 45, 139, 0.373);
-    border: solid black 1px;
+    background-color: rgba(157, 89, 239, 0.373);
+    border: solid rgb(239, 232, 232) 1px;
 }
 
 .header {
@@ -102,7 +102,7 @@ h1 {
 }
 
 h2 {
-    font-size: 23px;    
+    font-size: 30px;    
 }
 
 p {
@@ -232,3 +232,15 @@ li {
     font-size: 50px;
 
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 24%
+  
+  }
+
+  .center-text{
+    text-align: center;
+  }
